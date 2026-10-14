@@ -8,13 +8,13 @@ import java.util.List;
 @Data
 public class NodeConfig {
 
-    Map<String, String> nodeProperties;
-	String nodeId;
-	String nodeType;
-	List<String> outgoingNodes;
-	List<String> incomingNodes;
-	NodeConfig sourceNodeConfig;
-	boolean isStartNode;
-	boolean isEndNode;
+    private Map<String, String> nodeProperties;
+	private String nodeId;
+	private String nodeType;
+	private List<String> outgoingNodes;
+	private List<String> incomingNodes;
+	private NodeConfig sourceNodeConfig;
+	private boolean isStartNode;
+	private boolean isEndNode;
 
 }
