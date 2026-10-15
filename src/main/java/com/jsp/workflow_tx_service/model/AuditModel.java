@@ -10,13 +10,13 @@ import java.util.Date;
 @Data
 public class AuditModel {
 
-    @Column(name = "remarks")
+    @Column(name = "created_date")
     private Date createdDate;
 
-    @Column(name = "remarks")
+    @Column(name = "created_by")
     private String createdBy;
 
-    @Column(name = "remarks")
+    @Column(name = "modified_date")
     private  Date modifiedDate;
 
     @Column(name = "modified_by")

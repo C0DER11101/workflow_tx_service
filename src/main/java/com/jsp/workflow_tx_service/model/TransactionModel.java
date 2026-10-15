@@ -42,6 +42,6 @@ public class TransactionModel extends AuditModel {
     private Date txEndDate;
 
     @Column(name = "remarks")
-    private String remakrs;
+    private String remarks;
 
 }

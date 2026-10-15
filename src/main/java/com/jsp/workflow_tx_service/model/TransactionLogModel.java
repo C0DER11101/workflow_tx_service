@@ -2,6 +2,8 @@ package com.jsp.workflow_tx_service.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.util.Map;
 import java.util.Date;
@@ -19,38 +21,39 @@ public class TransactionLogModel extends AuditModel {
     @Column(name = "tenant_id")
     private String tenantId;
 
-    @Column(name = "tenant_id")
+    @Column(name = "tx_id")
     private String txId;
 
-    @Column(name = "tenant_id")
+    @Column(name = "tx_uniq_val")
     private String txUniqueVal;
 
-    @Column(name = "tenant_id")
+    @Column(name = "workflow_id")
     private String workflowId;
 
-    @Column(name = "tenant_id")
+    @Column(name = "current_node_id")
     private String currentNodeId;
 
-    @Column(name = "tenant_id")
+    @Column(name = "current_node_type")
     private String currentNodeType;
 
-    @Column(name = "tenant_id")
+    @Column(name = "status_flag")
     private String statusFlag;
 
-    @Column(name = "tenant_id")
+    @Column(name = "execution_signal")
     private String executionSignal;
 
-    @Column(name = "tenant_id")
+    @Column(name = "process_variable_data_map")
+    @JdbcTypeCode(SqlTypes.JSON)
     private Map<String, String> processVariableDataMap;
 
-    @Column(name = "tenant_id")
+    @Column(name = "trigger_date")
     private Date triggerDate;
 
-    @Column(name = "tenant_id")
+    @Column(name = "tx_start_date")
     @Temporal(TemporalType.DATE)
     private Date txStartDate;
 
-    @Column(name = "tenant_id")
+    @Column(name = "tx_end_date")
     @Temporal(TemporalType.DATE)
     private Date txEndDate;
 
